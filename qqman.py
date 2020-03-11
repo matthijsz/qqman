@@ -176,12 +176,3 @@ if __name__ == '__main__':
 
         data.rename(columns={args.col_chr.lower(): 'chr', args.col_bp.lower(): 'bp'}, inplace=True)
         manhattan(data, highlight=highlights, filename=args.man_name, **options['man'])
-
-
-
-data = pd.DataFrame()
-data.to_csv('test_{}.csv'.format(len(data)))
-for m in [.49, .45, .4, .35, .3, .25, .2, .15, .1, .05, .01, .001]:
-    print(m)
-    data2 = data.loc[data['MAF'] >= m, :]
-    data2.to_csv('test_{}.csv'.format(len(data2)))
