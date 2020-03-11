@@ -1,5 +1,5 @@
 # qqman
-My QQ/Manhattan-plotter written in Python.
+My QQ/Manhattan-plotter written in Python. Depending on the size of the input data this is about 2-3x faster than doing the equivalent in R (bigger input files result in bigger improvements).
 
 # Command-line usage
 To see the help page:<br>
