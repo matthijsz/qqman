@@ -2,12 +2,12 @@
 My QQ/Manhattan-plotter written in Python.
 
 # Command-line usage
-To see the help page:\n
-python qqman.py -h\n
-You’ll probably end up running something like this:\n
-python qqman.py --tsv my_sumstats.txt.gz --qq_name MyQQ.png –man_name MyManhattan.png --col_chr chromosome --col_bp basepair --col_rsid snp
-
-There’s an additional ‘options’ argument which I’ve designed to maintain full functionality from the command line, without adding too much rarely used arguments to the list. The input is a JSON-style character string (single quotes on the outside, double quotes on the inside) with your own options (see python qqman.py –adv_help). So for example, people often hate the colors I use, so to change the colors of the manhattan to blue and red:
-python qqman.py --tsv my_sumstats.txt.gz --qq_name MyQQ.png --man_name MyManhattan.png --options '{"qq":{}, "man": {"pointcolor": ["red", "blue"]}}'
+To see the help page:<br>
+python qqman.py -h<br>
+You’ll probably end up running something like this:<br>
+`pthon qqman.py --tsv my_sumstats.txt.gz --qq_name MyQQ.png –man_name MyManhattan.png --col_chr chromosome --col_bp basepair --col_rsid snp`<br>
+<br>
+There’s an additional ‘options’ argument which I’ve designed to maintain full functionality from the command line, without adding too much rarely used arguments to the list. The input is a JSON-style character string (single quotes on the outside, double quotes on the inside) with your own options (see python qqman.py –adv_help). So for example, people often hate the colors I use, so to change the colors of the manhattan to blue and red:<br>
+`pthon qqman.py --tsv my_sumstats.txt.gz --qq_name MyQQ.png --man_name MyManhattan.png --options '{"qq":{}, "man": {"pointcolor": ["red", "blue"]}}'`<br>
 If you want to know which colors you can use: https://matplotlib.org/tutorials/colors/colors.html
 
