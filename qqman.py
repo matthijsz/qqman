@@ -28,7 +28,7 @@ def qqplot(pvector, filename=None, size=1, pointcolor='black', title=None, linec
         return fig, ax
 
 
-def manhattan(df, filename="", sigp=5e-8, sigcolor='black', sugp=1e-5, sugcolor='black',
+def manhattan(df, filename=None, sigp=5e-8, sigcolor='black', sugp=1e-5, sugcolor='black',
               pointcolor=['midnightblue', 'goldenrod'], size=1, highlight=[],
               highlightcolor=['orange'], title=None, rainbow=False):
     df.columns = map(str.lower, df.columns)
