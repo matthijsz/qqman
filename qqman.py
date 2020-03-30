@@ -38,9 +38,9 @@ def manhattan(df, filename=None, sigp=5e-8, sigcolor='black', sugp=1e-5, sugcolo
                       '#8000FF', '#BF00FF', '#FF00FF', '#FF00BF']
         highlightcolor = list(reversed(pointcolor))
     df['logp'] = -(np.log10(df['p']))
-    df['chromosome'] = df.chr.astype('category')
-    df.chromosome = df.chromosome.cat.set_categories(['ch-%i' % i for i in range(23)], ordered=True)
-    df = df.sort_values('chr')
+    df['chromosome'] = df['chr'].astype('category')
+    df['chromosome'] = df['chromosome'].cat.set_categories(['ch-%i' % i for i in range(23)], ordered=True)
+    df.sort_values('chr', inplace=True)
     df['bpadd'] = 0
     add = 0
     for c in range(2, 24):
@@ -82,6 +82,7 @@ def manhattan(df, filename=None, sigp=5e-8, sigcolor='black', sugp=1e-5, sugcolo
         ax.set_title(title)
     if filename is not None:
         fig.savefig(filename, dpi=300, bbox_inches='tight')
+        plt.close()
     else:
         return fig, ax
 
