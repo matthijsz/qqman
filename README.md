@@ -2,6 +2,9 @@
 My QQ/Manhattan-plotter written in Python. Depending on the size of the input data this is about 2-3x faster than doing the equivalent in R (bigger input files result in bigger improvements).<br>
 It can be used directly in your own Python script, or it can be run from the command line. <br>
 
+# Note
+This module has been implemented in my [pysumstats](https://github.com/matthijsz/pysumstats/) package, development will continue there, but you are still free to use this stand-alone module as is.
+
 # Command-line usage
 To see the help page:<br>
 python qqman.py -h<br>
